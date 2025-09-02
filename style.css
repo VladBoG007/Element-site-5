@@ -1,0 +1,41 @@
+.info{
+	color: #FFFFFF;
+	font-size: 1.5em;
+	position: relative;
+	z-index: 10;
+}
+.btn-pulse{
+	position: relative;
+	background: #FF4A4A;
+	border: 0;
+	width: 5em;
+	height: 5em;
+	border-radius: 2.5em;
+	top: 150px;
+	left: 50%;
+}
+.btn-pulse::after{
+	content: '';
+	position: absolute;
+	width: 5em;
+	height: 5em;
+	top: 0;
+	left: 0;
+	background: #FF4A4A;
+	border-radius: 2.5em;
+	animation: pulse 2s ease-out infinite;
+}
+@keyframes pulse{
+	0%, 30%{
+		transform: scale(0);
+		opacity: 1;
+	}
+	60%{
+		transform: scale(2);
+		opacity: 0.5;
+	}
+	100%{
+		opacity: 0;
+		transform: scale(2.5);
+	}
+}
